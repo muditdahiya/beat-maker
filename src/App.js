@@ -35,12 +35,11 @@ function App() {
             move: {
               attract: {
                 rotate: {
-                  x: 600,
+                  x: 0,
                   y: 1200,
                 },
               },
               direction: "right",
-              outModes: { left: "none" },
               enable: true,
               outModes: {
                 bottom: "out",
@@ -53,11 +52,11 @@ function App() {
               density: {
                 enable: true,
               },
-              value: 400,
+              value: 100,
             },
             opacity: {
               random: {
-                enable: false,
+                enable: true,
               },
               value: {
                 min: 0.1,
@@ -84,8 +83,10 @@ function App() {
           },
         }}
       />
-      <h1>Hi! Welcome to Beat Maker</h1>
-      <h2>Tap on the drums or use keyboard keys to play sounds.</h2>
+      <div className="card">
+        <h1>Hi! Welcome to Beat Maker</h1>
+        <h2>Tap on the drums or use keyboard keys to play sounds.</h2>
+      </div>
 
       <Drums />
     </div>
