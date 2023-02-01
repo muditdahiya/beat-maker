@@ -6,7 +6,7 @@ function Bass(props) {
   let playSound;
   useEffect(() => {
     sound = new Howl({
-      src: `../Samples/Bass/CYCdh_AcouKick-0${props.choice}.wav`,
+      src: `${process.env.PUBLIC_URL}/Samples/Bass/CYCdh_AcouKick-0${props.choice}.wav`,
       // src: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
     });
 
