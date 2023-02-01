@@ -6,8 +6,10 @@ function Bass(props) {
   let playSound;
   useEffect(() => {
     sound = new Howl({
-      src: [`/Samples/Bass/CYCdh_AcouKick-0${props.choice}.wav`],
+      src: `/Samples/Bass/CYCdh_AcouKick-0${props.choice}.wav`,
+      // src: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
     });
+
     playSound = (event) => {
       if (event.key === props.mapping) {
         console.log(props.choice);
@@ -17,6 +19,7 @@ function Bass(props) {
 
     document.addEventListener("keydown", playSound);
 
+    sound.play();
     //return cleans up before the next render
     return () => {
       document.removeEventListener("keydown", playSound);

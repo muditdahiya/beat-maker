@@ -1,6 +1,6 @@
 {
   "name": "beat-maker",
-  "homepage": "http://muditdahiya.com/beat-maker",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
