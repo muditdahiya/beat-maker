@@ -6,7 +6,9 @@ function HiHatClose(props) {
   let playSound;
   useEffect(() => {
     sound = new Howl({
-      src: [`/Samples/HiHatClose/Acoustic Hat-0${props.choice}.wav`],
+      src: [
+        `${process.env.PUBLIC_URL}/Samples/HiHatClose/Acoustic Hat-0${props.choice}.wav`,
+      ],
     });
 
     playSound = (event) => {

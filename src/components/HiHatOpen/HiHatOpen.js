@@ -6,7 +6,9 @@ function HiHatOpen(props) {
   let playSound;
   useEffect(() => {
     sound = new Howl({
-      src: [`/Samples/HiHatOpen/CYCdh_Sab_OpHat-0${props.choice}.wav`],
+      src: [
+        `${process.env.PUBLIC_URL}/Samples/HiHatOpen/CYCdh_Sab_OpHat-0${props.choice}.wav`,
+      ],
     });
     playSound = (event) => {
       if (event.key === props.mapping) {

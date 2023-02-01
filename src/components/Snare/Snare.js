@@ -6,7 +6,9 @@ function Snare(props) {
   let playSound;
   useEffect(() => {
     sound = new Howl({
-      src: [`/Samples/Snare/Acoustic Snare-0${props.choice}.wav`],
+      src: [
+        `${process.env.PUBLIC_URL}/Samples/Snare/Acoustic Snare-0${props.choice}.wav`,
+      ],
     });
     playSound = (event) => {
       if (event.key === props.mapping) {
